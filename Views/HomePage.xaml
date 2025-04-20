@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeesAPP.Views.HomePage"
+              xmlns:model="clr-namespace:EmployeesAPP.ViewModels"
+              xmlns:chart="clr-namespace:Syncfusion.Maui.Toolkit.Charts;assembly=Syncfusion.Maui.Toolkit"
+             Title="Employees Smart App">
+    <ContentPage.BindingContext>
+        <model:HomePageViewModel/>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <Image WidthRequest="200" HeightRequest="200" Source="logo.png"></Image>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <VerticalStackLayout
+                 Grid.Row="0"
+                 Padding="2">
+                    <Label 
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Padding="3"
+                        Text="Logged in User"
+                        VerticalTextAlignment="Start"/>
+                    <Label FontSize="18"
+                           Padding="3"
+                           Text="Macro Code"
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Start"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout
+               Grid.Row="1"
+               Padding="10">
+                    <chart:SfCircularChart>
+                        <chart:SfCircularChart.Title>
+                            <Label Text="LEAVE APPLCIATIONS"/>
+                        </chart:SfCircularChart.Title>
+
+                        <chart:SfCircularChart.BindingContext>
+                            <model:HomePageViewModel/>
+                        </chart:SfCircularChart.BindingContext>
+
+                        <chart:SfCircularChart.Legend>
+                            <chart:ChartLegend/>
+                        </chart:SfCircularChart.Legend>
+
+                        <chart:PieSeries ItemsSource="{Binding Data}"
+                        ShowDataLabels="True"
+                        XBindingPath="LeaveType"
+                        EnableTooltip="True"
+                        YBindingPath="NofDays"/>
+                    </chart:SfCircularChart>
+                </VerticalStackLayout>
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
