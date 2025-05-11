@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace EmployeesAPP.ViewModels
 {
-    public class EmployeesListPageViewModel
+    public class AddNewLeaveApplicationPageViewModel
     {
-        public EmployeesListPageViewModel()
+        public AddNewLeaveApplicationPageViewModel()
         {
             
         }
-
-
-        
-
     }
 }

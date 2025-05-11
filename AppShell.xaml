@@ -66,8 +66,10 @@
 
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <VerticalStackLayout x:Name="FaloutHeaderGrid" BackgroundColor="{StaticResource White}" 
-                                 Margin="0" Padding="0,10,0,0" >
+            <VerticalStackLayout 
+                x:Name="FaloutHeaderGrid" 
+                BackgroundColor="{StaticResource White}" 
+                Margin="0" Padding="0,10,0,0" >
                 <Image Grid.Row="0" Source="logo.png" HeightRequest="120" Margin="0"/>
                 <Label Grid.Row="1" Text="Employees Mobile App"
                        TextColor="{StaticResource Orange}"
@@ -86,18 +88,25 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate views:HomePage}"
-        Route="HomePage" />
+        Route="HomePage"
+        Icon="home.png"
+        />
     <ShellContent
         Title="Employees List"
         ContentTemplate="{DataTemplate views:EmployeesListPage}"
+        Icon="olist.png"
         Route="EmployeesListPage" />
     <ShellContent
         Title="My Leave Application List"
         ContentTemplate="{DataTemplate views:LeaveApplicationListPage}"
-        Route="LeaveApplicationListPage" />
+        Route="LeaveApplicationListPage"
+        Icon="olist.png"
+        />
     <ShellContent
         Title="Logout"
         ContentTemplate="{DataTemplate views:LogoutPage}"
-        Route="LogoutPage" />
+        Route="LogoutPage"
+        Icon="logout.png"
+        />
 
 </Shell>

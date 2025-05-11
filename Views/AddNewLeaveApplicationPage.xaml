@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeesAPP.Views.AddNewLeaveApplicationPage"
+             xmlns:sf="http://schemas.syncfusion.com/maui/toolkit"
+             Title="Add New Leave Application">
+    <ScrollView>
+        
+    <VerticalStackLayout Margin="8,0,0,8" Spacing="10">
+            <Label
+           Text="Employee Name"
+           Margin="5,0,0,5"/>
+            <sf:SfTextInputLayout
+              InputViewPadding="6,5,0,5"
+              Hint="Employee Name"
+              IsHintAlwaysFloated="False">
+                <Entry
+                    FlexLayout.AlignSelf="Stretch"
+                    Text="Macro Code"
+                    FontSize="14"
+                    HeightRequest="40"/>
+            </sf:SfTextInputLayout>
+            <Label
+            Text="Leave Type"
+            Margin="5,0,0,5"/>
+            <sf:SfTextInputLayout
+               InputViewPadding="6,5,0,5"
+               Hint="Leave Type"
+               IsHintAlwaysFloated="False">
+        <Picker
+         FlexLayout.AlignSelf="Stretch"
+         FontSize="14"
+         HeightRequest="40"/>
+            </sf:SfTextInputLayout>
+
+
+            <Label
+Text="Leave Days"
+Margin="5,0,0,5"/>
+            <sf:SfTextInputLayout
+       InputViewPadding="6,5,0,5"
+       Hint="Leave Days"
+       IsHintAlwaysFloated="False"> 
+                <Entry
+         FlexLayout.AlignSelf="Stretch"
+         Text="5"
+         Keyboard="Numeric"
+         FontSize="14"
+         HeightRequest="40"/>
+            </sf:SfTextInputLayout>
+
+            <Button Text="Submit Leave Application"
+                Margin="10,10,10,10"
+                CornerRadius="10"
+                BackgroundColor="{x:StaticResource Green}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

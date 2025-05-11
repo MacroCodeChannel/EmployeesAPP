@@ -27,12 +27,17 @@ namespace EmployeesAPP
             builder.Services.AddSingleton<HomePage>();
             builder.Services.AddTransient<LogoutPage>();
             builder.Services.AddTransient<LeaveApplicationListPage>();
+            builder.Services.AddTransient<AddNewLeaveApplicationPage>();
             
 
 
             //View Models
             builder.Services.AddSingleton<LoginPageViewModel>();
-
+            builder.Services.AddTransient<EmployeesListPageViewModel>();
+            builder.Services.AddTransient<HomePageViewModel>();
+            builder.Services.AddTransient<LeaveApplicationListPageViewModel>();
+            builder.Services.AddTransient<AddNewLeaveApplicationPageViewModel>();
+            
 
             return builder.Build();
         }
